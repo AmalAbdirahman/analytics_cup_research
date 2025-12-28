@@ -1,0 +1,7 @@
+pandas
+matplotlib
+mplsoccer
+numpy
+seaborn
+kloppy
+scipy
