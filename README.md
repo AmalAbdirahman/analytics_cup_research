@@ -21,11 +21,27 @@ _⚠️ Not adhering to these submission rules and the [**Analytics Cup Rules**]
 
 ---
 
-## Research Track Abstract Template (max. 500 words)
-#### Introduction
+# Schrödinger's Pitch Control: Quantifying the Decay of Truth
+## SkillCorner X PySport Analytics Cup (Research Track)
 
-#### Methods
+**Match ID:** 1886347
 
-#### Results
+---
 
-#### Conclusion
+### Abstract
+
+**Introduction**
+
+Broadcast tracking data suffers from a critical limitation: occlusion. When players leave the camera view, standard models use linear extrapolation (`v_last`), introducing "Deterministic Bias." In high-stakes tactical analysis, assuming a player is at a specific coordinate when they are actually unknown creates a false sense of security. This study proposes a probabilistic framework to quantify this uncertainty.
+
+**Methods**
+
+We discard the single-point coordinate system for occluded players ("Ghosts"). Instead, we model their position as a Probability Density Function (PDF) using **Anisotropic Particle Filtering**. The physics engine applies Langevin dynamics, where stochastic noise is biased by the player's momentum vector. We quantify the tactical impact by computing a **Probabilistic Pitch Control** surface and subtracting the deterministic baseline to isolate the "Zone of Deception."
+
+**Results**
+
+Applied to Match 1886347, our model reveals significant divergence between broadcast data and tactical reality. We identified that **60% of high-velocity sprints (>4m/s)** in wide channels are invisible to the camera. Furthermore, in transition phases, the probabilistic model identified a **+32.4 Unit** "Ghost Gain"—defensive control invisible to standard models.
+
+**Conclusion**
+
+We demonstrate that uncertainty is signal, not noise. By quantifying the "Decay of Truth," we provide analysts with a confidence interval for their tactical models.
